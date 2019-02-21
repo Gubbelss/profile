@@ -1,6 +1,6 @@
 <h1>Search by Username</h1>
 <form action="search.php" method="post" enctype="multipart/form-data">
-    Username:  <input type="text" name="username" value="" placeholder="" size="20">
+    Username:  <input type="text" name="brand" value="" placeholder="" size="20">
     <input type="submit" value="Search" name="submit">
 </form>
 
@@ -8,11 +8,11 @@
 
 include_once("includes/config.php");
 
-    if (isset($_POST['username']))
+    if (isset($_POST['brand']))
     {
-        $username = $_POST['username'];
+        $brand = $_POST['brand'];
 
-        $sql = "SELECT * FROM users WHERE username='$username';";
+        $sql = "SELECT * FROM shoes WHERE brand='$brand';";
 
         $result = $conn->query($sql);
 
@@ -25,9 +25,9 @@ include_once("includes/config.php");
             while($row = $result->fetch_assoc()) {
                 echo '<table>';
                 echo '<tr><td>ID:</td><td>'.$row["id"].'</td></tr>';
-                echo '<tr><td>Firstname:</td><td>'.$row["firstname"].'</td></tr>';
-                echo '<tr><td>Lastname:</td><td>'.$row["lastname"].'</td></tr>';
-                echo '<tr><td>Country:</td><td>'.$row["username"].'</td></tr>';
+                echo '<tr><td>Brand:</td><td>'.$row["brand"].'</td></tr>';
+                echo '<tr><td>Name:</td><td>'.$row["name"].'</td></tr>';
+                echo '<tr><td>Specification:</td><td>'.$row["specification"].'</td></tr>';
                 echo '</table>';
                 echo '<hr />';
             }
@@ -36,6 +36,6 @@ include_once("includes/config.php");
            echo "0 results";
         }
     }
-    include_once("includes/menu.php");
+    include_once("index.php");
 
 ?>

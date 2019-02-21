@@ -3,20 +3,20 @@
 
     if (isset($_GET['first']))
     {
-        $username = $_GET['first'];
-        $sql = "SELECT * FROM users WHERE username='$username'";
+        $brand = $_GET['first'];
+        $sql = "SELECT * FROM shoes WHERE brand='$brand'";
 
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
 
             if($row = $result->fetch_assoc()) {
-                echo '<h1>'.$row["username"]."'s Profile</h1>";
+                echo '<h1>'.$row["brand"]."'s Profile</h1>";
                 echo '<table>';
                 echo '<tr><td>ID:</td><td>'.$row["id"].'</td></tr>';
-                echo '<tr><td>Firstname:</td><td>'.$row["firstname"].'</td></tr>';
-                echo '<tr><td>Lastname:</td><td>'.$row["lastname"].'</td></tr>';
-                echo '<tr><td>Country:</td><td>'.$row["username"].'</td></tr>';
+                echo '<tr><td>Brand:</td><td>'.$row["brand"].'</td></tr>';
+                echo '<tr><td>Name:</td><td>'.$row["name"].'</td></tr>';
+                echo '<tr><td>Specification:</td><td>'.$row["specification"].'</td></tr>';
             }
             echo '</table>';
         }
@@ -28,7 +28,7 @@
 
         echo '<h2>All our members:</h2>';
 
-        $sql = "SELECT * FROM users";
+        $sql = "SELECT * FROM shoes";
 
         $result = $conn->query($sql);
 
@@ -39,9 +39,9 @@
                 echo '<hr />';
                 echo '<table>';
                 echo '<tr><td>ID:</td><td>'.$row["id"].'</td></tr>';
-                echo '<tr><td>Firstname:</td><td>'.$row["firstname"].'</td></tr>';
-                echo '<tr><td>Lastname:</td><td>'.$row["lastname"].'</td></tr>';
-                echo '<tr><td>Country:</td><td>'.$row["username"].'</td></tr>';
+                echo '<tr><td>Brand:</td><td>'.$row["brand"].'</td></tr>';
+                echo '<tr><td>Name:</td><td>'.$row["name"].'</td></tr>';
+                echo '<tr><td>Specification:</td><td>'.$row["specification"].'</td></tr>';
                 echo '</table>';
 
             }
@@ -51,5 +51,5 @@
         }
     }
 
-    include_once("includes/menu.php");
+    include_once("index.php");
 ?>
