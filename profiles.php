@@ -14,7 +14,6 @@
                 echo '<h1>'.$row["username"]."'s Profile</h1>";
                 echo '<table>';
                 echo '<tr><td>ID:</td><td>'.$row["id"].'</td></tr>';
-                echo '<tr><td>Avatar:</td><td><img src="'.$row["avatar"].'" width="100px" /></td></tr>';
                 echo '<tr><td>Firstname:</td><td>'.$row["firstname"].'</td></tr>';
                 echo '<tr><td>Lastname:</td><td>'.$row["lastname"].'</td></tr>';
                 echo '<tr><td>Country:</td><td>'.$row["username"].'</td></tr>';
@@ -40,7 +39,6 @@
                 echo '<hr />';
                 echo '<table>';
                 echo '<tr><td>ID:</td><td>'.$row["id"].'</td></tr>';
-                echo '<tr><td>Avatar:</td><td><img src="'.$row["avatar"].'" width="100px" /></td></tr>';
                 echo '<tr><td>Firstname:</td><td>'.$row["firstname"].'</td></tr>';
                 echo '<tr><td>Lastname:</td><td>'.$row["lastname"].'</td></tr>';
                 echo '<tr><td>Country:</td><td>'.$row["username"].'</td></tr>';
