@@ -1,6 +1,6 @@
-<h1>Search by Username</h1>
+<h1>Search by Brand</h1>
 <form action="search.php" method="post" enctype="multipart/form-data">
-    Username:  <input type="text" name="brand" value="" placeholder="" size="20">
+    Brand:  <input type="text" name="brand" value="" placeholder="" size="20">
     <input type="submit" value="Search" name="submit">
 </form>
 

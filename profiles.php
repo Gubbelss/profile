@@ -1,9 +1,9 @@
 <?php
     include_once("includes/config.php");
 
-    if (isset($_GET['first']))
+    if (isset($_GET['brand']))
     {
-        $brand = $_GET['first'];
+        $brand = $_GET['brand'];
         $sql = "SELECT * FROM shoes WHERE brand='$brand'";
 
         $result = $conn->query($sql);
